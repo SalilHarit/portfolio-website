@@ -1,0 +1,35 @@
+* {
+    list-style-type: none;
+
+
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about {
+    margin: 100px 347px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+
+
+}
+body{
+    background-color: #fdfd96;
+}
+
+/* .pic{
+    display: flex;
+    justify-content: center;
+    margin: 100px 347px;
+    width: 800px;
+} */
