@@ -3,29 +3,125 @@
 
 
 }
-
-.name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+.salil,.project,.resume{
+    display: grid;
+    grid-row: auto-flow / 1fr 1fr 1fr;
 }
 
+.salil {
+    width: 123px;
+    height: 22px;
 
-.about {
-    margin: 100px 347px;
-    width: 500px;
-    height: 500px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 75px;
+    line-height: 91px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: white;
+    letter-spacing: 0.055em;
+    text-indent: 1px;
+
+    color: rgba(28, 201, 0, 0.71);
+  }
+.project{
+    width: 140px;
+    height: 62px;
+    margin: -95px 837px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 62px;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-end;
+    letter-spacing: 0.055em;
+    text-indent: 1px;
+
+    color: #0081C9;
+
+}
+.resume{
+ 
+width: 137px;
+height: 62px;
+margin: 32px 544px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 51px;
+line-height: 62px;
+display: flex;
+align-items: flex-end;
+letter-spacing: 0.055em;
+text-indent: 1px;
+
+color: #AD00C9; 
+}
+.meh{
+    width: 140px;
+    height: 62px;
+    margin: -92px 1092px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 51px;
+    line-height: 62px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.055em;
+    text-indent: 1px;
+
+    color: #C94900;
+
+}
+.about{
     
+    width: 1187px;
+    height: 440px;
+    
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 139px;
+    line-height: 164px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.085em;
+    text-indent: 1px;
+    
+    color: #000000;
+}
+.card1{
+    position: absolute;
+width: 679px;
+height: 529px;
+left: 10px;
+top: 300px;
+
+background: rgba(217, 217, 217, 0.52);
+border-radius: 26px;
+
 
 
 }
-body{
-    background-color: #fdfd96;
-}
+
+
 
 /* .pic{
     display: flex;
