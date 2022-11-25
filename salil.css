@@ -3,6 +3,9 @@
 
 
 }
+.oof{
+    z-index: 1;
+}
 body {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
@@ -93,7 +96,7 @@ color: #AD00C9;
 .about{
     
     width: 1187px;
-    height: 440px;
+    height: 1177px;
     
     font-family: 'Italiana';
     font-style: normal;
