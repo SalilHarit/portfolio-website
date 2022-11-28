@@ -5,6 +5,7 @@
 }
 .oof{
     z-index: 1;
+    right: 100px;
 }
 body {
     animation: fadeInAnimation ease 2s;
@@ -101,7 +102,7 @@ color: #AD00C9;
     font-family: 'Italiana';
     font-style: normal;
     font-weight: 400;
-    font-size: 139px;
+    font-size: 100px;
     line-height: 164px;
     display: flex;
     align-items: center;
@@ -110,25 +111,13 @@ color: #AD00C9;
     
     color: #000000;
 }
-.card1{
-    position: absolute;
-width: 679px;
-height: 529px;
-left: 10px;
-top: 300px;
-
-background: rgba(217, 217, 217, 0.52);
-border-radius: 26px;
 
 
 
-}
-
-
-
-/* .pic{
-    display: flex;
-    justify-content: center;
-    margin: 100px 347px;
+.projects{
+    font-family: 'Montserrat';
+    font-size: larger;
+    margin:1127px 104px;
     width: 800px;
-} */
+    border: 1px solid rgba(128, 128, 128, 0.559);
+}
