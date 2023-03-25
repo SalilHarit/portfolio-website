@@ -3,6 +3,12 @@
 
 
 }
+a,a:visited {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: none;
+  }
+  
 .oof{
     z-index: 1;
     right: 100px;
