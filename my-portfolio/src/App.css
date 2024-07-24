@@ -1,0 +1,38 @@
+/* App.css (Additional Navbar Styling) */
+nav ul {
+  display: flex;
+  justify-content: space-around; /* Evenly space items */
+  align-items: center;
+  background-color: #f0f0f0; /* Background color */
+  padding: 15px;
+}
+
+nav li {
+  margin: 0; /* Remove default margin */
+}
+
+nav li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px; /* Add padding around links */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav li a:hover {
+  background-color: #ff5151; /* Hover effect */
+}
+
+/* Nested List Styling */
+nav li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav li:hover ul {
+  display: block;
+}
