@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { motion } from 'framer-motion';
 import './Home.css';
 import profilePic from './Screenshot_2022_0829_014250.jpg';
-import { NavDropdown, Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import SolarPowerPlantMonitoring  from './SolarPowerPlantMonitoring';
 const Home = () => {
   const containerVariants = {
@@ -25,13 +25,6 @@ const Home = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/about">About</Nav.Link>
-              <NavDropdown title="Projects" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Solar Power Plant Monitoring System</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">AstroVista</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">DJango Erp</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="https://github.com/SalilHarit?tab=repositories">More Projects</NavDropdown.Item>
-              </NavDropdown>
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -54,7 +47,24 @@ const Home = () => {
         <motion.p className="lead" variants={itemVariants}>
           Crafting digital experiences with code and creativity.
         </motion.p>
-
+        <motion.p className="Lead" variants={itemVariants}>
+        <h1>Projects</h1>
+        </motion.p>
+        <motion.ul className="list-group" variants={itemVariants}>
+        <li className="list-group-item">
+          
+          <h2>Solar Power Plant Monitoring</h2>
+          <p>This Project Involved Creation of a AWS cloud based system for remote monitoring solar power plants</p>
+        </li>
+        <li className="list-group-item">
+          <h2>AstroVista</h2>
+          <p>This Project Involved Creation of an android app for Tamil Nadu astrologers that aim to spread their knowledge to other parts of India</p>
+        </li>
+        <li className="list-group-item">
+          <h2>Little Lemon Django Project</h2>
+          <p>A full stack web application created using DJango framework in python and mysql for hyphothetical restaraunt called little lemon</p>
+        </li>
+      </motion.ul>
         <SolarPowerPlantMonitoring />
       </motion.div>
     </div>
