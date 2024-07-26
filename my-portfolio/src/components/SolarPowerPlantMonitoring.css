@@ -1,0 +1,8 @@
+.code-block {
+    background-color: #f8f9fa; /* Light background for better readability */
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: pre-wrap; /* Preserve whitespace */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+  }
