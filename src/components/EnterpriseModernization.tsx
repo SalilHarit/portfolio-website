@@ -83,7 +83,7 @@ const FAMSArchitecturalAudit = () => {
                 </div>
                 <h1 className="display-3 mb-3 fw-bold">FAMS — Fixed Asset Management System</h1>
                 <p className="lead mx-auto col-lg-8 text-muted px-4">
-                  106-screen Flutter application replacing legacy software for a leading Indian industrial services organization.
+                  106-screen Flutter Desktop application replacing legacy software for a leading Indian industrial services organization.
                 </p>
               </div>
             </motion.div>
@@ -98,14 +98,14 @@ const FAMSArchitecturalAudit = () => {
                    Enterprise asset management is typically trapped in <strong>fragmented, manual spreadsheets</strong>. 
                    For high-compliance sectors, this leads to <strong>audit failures, inaccurate depreciation calculations</strong>, 
                    and millions in lost tax benefits. This project involved migrating 40+ years of legacy data into a 
-                   modern Flutter/Spring Boot system with 173 technical requirements.
+                   modern Flutter Desktop + Spring Boot system with 173 technical requirements.
                 </p>
               </div>
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5" id="main-carousel">
                 <div className="text-center mb-4">
-                    <h2 className="h4 fw-bold">Production Interface Tour</h2>
+                    <h2 className="h4 fw-bold">Production Interface Tour (Desktop UI)</h2>
                     <p className="small text-muted">Viewing {activeIndex + 1} of {allImages.length} live system modules</p>
                 </div>
                 
@@ -131,14 +131,14 @@ const FAMSArchitecturalAudit = () => {
                   <h2 className="display-5 fw-bold mb-4">The Technical Solution</h2>
                   <p className="text-secondary mb-4 fs-5" style={{ lineHeight: '1.8' }}>
                     FAMS provides a centralized source of truth—automating Asset ID generation, 
-                    multi-method depreciation, and financial audit trails.
+                    multi-method depreciation, and financial audit trails on a production-grade Desktop core.
                   </p>
                   <Row xs={1} md={2} className="g-4">
                     <Col>
                         <div className="d-flex align-items-center mb-1 text-primary fw-bold">
-                            <CheckCircle size={18} className="me-2" /> Flutter + Riverpod
+                            <CheckCircle size={18} className="me-2" /> Flutter Desktop + Riverpod
                         </div>
-                        <p className="small text-muted">High-performance state management across 100+ screens.</p>
+                        <p className="small text-muted">High-performance state management across 106 Desktop screens.</p>
                     </Col>
                     <Col>
                         <div className="d-flex align-items-center mb-1 text-success fw-bold">
@@ -152,7 +152,7 @@ const FAMSArchitecturalAudit = () => {
                     <div className="glass-card p-4 p-md-5 border-0 shadow-sm">
                         <h4 className="h5 fw-bold mb-4">Functional Delivery</h4>
                         <div className="d-flex flex-wrap gap-2">
-                            {["Riverpod", "Spring Boot", "JWT Auth", "PostgreSQL", "Jira UAT", "QR Tracking", "RESTful APIs"].map((t, i) => (
+                            {["Riverpod", "Spring Boot", "JWT Auth", "PostgreSQL", "Jira UAT", "QR Tracking", "Flutter Desktop"].map((t, i) => (
                                 <span key={i} className="tech-pill bg-light text-primary px-3 py-2 rounded-3 small fw-bold">{t}</span>
                             ))}
                         </div>
@@ -191,7 +191,7 @@ const FAMSArchitecturalAudit = () => {
                 {[
                   { phase: "Requirements & Audit", progress: 100, desc: "Legacy data migration strategy and rule mapping." },
                   { phase: "Architecture & API", progress: 100, desc: "Spring Boot backend with PostgreSQL schema design." },
-                  { phase: "Mobile Development", progress: 100, desc: "106-screen Flutter app with Riverpod state management." },
+                  { phase: "Desktop Development", progress: 100, desc: "106-screen Flutter Desktop app with Riverpod management." },
                   { phase: "UAT & Handover", progress: 100, desc: "User Acceptance Testing and statutory verification." }
                 ].map((p, i) => (
                   <Col md={3} key={i}>

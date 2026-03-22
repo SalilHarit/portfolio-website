@@ -27,7 +27,7 @@ const projects = [
   {
     title: "FAMS — Enterprise Asset Management System",
     stack: ["Flutter", "Riverpod", "Spring Boot", "PostgreSQL", "JWT", "REST APIs"],
-    oneLiner: "106-screen Flutter app replacing a legacy VB.NET system for a 40-year-old IT services company.",
+    oneLiner: "106-screen Flutter Desktop app replacing a legacy VB.NET system for a 40-year-old IT services company.",
     stats: "UAT Complete",
     link: "/enterprise-modernization",
     image: "/assets/fams.png",
@@ -81,7 +81,7 @@ const projects = [
 ];
 
 const skills = [
-  { category: "Mobile", items: ["Flutter", "Dart", "Riverpod", "FlutterFlow"] },
+  { category: "Mobile & Desktop", items: ["Flutter", "Dart", "Riverpod", "FlutterFlow"] },
   { category: "Backend", items: ["Spring Boot", "Node.js", "Express", "AWS Lambda"] },
   { category: "Databases", items: ["PostgreSQL", "Firebase Firestore", "MongoDB"] },
   { category: "Cloud & IoT", items: ["AWS (S3, API Gateway)", "GCP", "Raspberry Pi", "VTL"] },
@@ -138,7 +138,7 @@ const Home = () => {
                     Dart · Spring Boot · PostgreSQL · Firebase · AWS
                 </p>
                 <p className="mx-auto col-md-8 text-muted mb-5 fs-5 lh-base">
-                  I build production Flutter apps and backend APIs. Recent work includes a 106-screen enterprise asset management system for a 40-year-old IT firm (Flutter/Riverpod + Spring Boot + PostgreSQL) and a live EdTech platform on the Play Store. Based in Delhi, graduating June 2025, open to full-time roles.
+                  I build production Flutter (Mobile & Desktop) apps and backend APIs. Recent work includes a 106-screen Flutter Desktop asset management system for a 40-year-old IT firm (Flutter/Riverpod + Spring Boot + PostgreSQL) and a live EdTech platform on the Play Store. Based in Delhi, graduating June 2025, open to full-time roles.
                 </p>
                 <div className="d-flex gap-3 justify-content-center mb-5 mt-4">
                   <a href="mailto:salilharit2001@gmail.com" className="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2">
