@@ -106,15 +106,15 @@ const Home = () => {
       <div className="bg-mesh" />
       
       {/* Navigation */}
-      <Navbar expand="lg" variant="dark" className="fixed-top glass-nav px-md-5">
+      <Navbar expand="lg" variant="light" className="fixed-top glass-nav px-md-5 shadow-sm">
         <Container fluid>
-          <Navbar.Brand href="/" className="fw-bold tracking-tighter">SALIL HARIT</Navbar.Brand>
+          <Navbar.Brand href="/" className="fw-bold tracking-tighter text-dark">SALIL HARIT</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto gap-4 align-items-center">
-              <Nav.Link href="#built" className="nav-hover uppercase small fw-bold">What I've Built</Nav.Link>
-              <Nav.Link href="#expertise" className="nav-hover uppercase small fw-bold">Expertise</Nav.Link>
-              <Nav.Link href="mailto:salilharit2001@gmail.com" className="btn btn-outline-primary btn-sm px-4 rounded-pill">HIRE ME</Nav.Link>
+              <Nav.Link href="#built" className="nav-hover text-dark uppercase small fw-bold">What I've Built</Nav.Link>
+              <Nav.Link href="#expertise" className="nav-hover text-dark uppercase small fw-bold">Expertise</Nav.Link>
+              <Nav.Link href="mailto:salilharit2001@gmail.com" className="btn btn-outline-primary fw-bold text-primary btn-sm px-4 rounded-pill">HIRE ME</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
