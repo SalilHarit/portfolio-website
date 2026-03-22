@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Carousel, Col, Container, Row, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ShieldCheck, Database, Layout, TrendingUp, CheckCircle, Server, BarChart3, Settings, Zap, History, ClipboardCheck, AlertCircle, Eye, Grid } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Database, Layout, TrendingUp, CheckCircle, Server, BarChart3, Settings, Zap, History, ClipboardCheck, AlertCircle, Eye, Grid, Maximize2 } from 'lucide-react';
 import './Home.css';
 import PasswordShield from './PasswordShield';
 
@@ -104,25 +104,29 @@ const FAMSArchitecturalAudit = () => {
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5" id="main-carousel">
-                <div className="text-center mb-4">
-                    <h2 className="h4 fw-bold">Production Interface Tour (Desktop UI)</h2>
-                    <p className="small text-muted">Viewing {activeIndex + 1} of {allImages.length} live system modules</p>
+                <div className="text-center mb-4 px-3">
+                    <h2 className="h4 fw-bold mb-2">Production Interface Tour (Desktop UI)</h2>
+                    <p className="small text-muted mb-0">Viewing {activeIndex + 1} of {allImages.length} live system modules</p>
+                    <div className="d-md-none small text-primary mt-2 d-flex align-items-center justify-content-center gap-1">
+                        <Maximize2 size={14} /> <i>Pinch or rotate phone for full desktop detail</i>
+                    </div>
                 </div>
                 
-                <Carousel activeIndex={activeIndex} onSelect={handleSelect} className="glass-card shadow-2xl overflow-hidden" indicators={true} interval={5000} fade>
-                  {allImages.map((img, idx) => (
-                    <Carousel.Item key={idx}>
-                       <div className="bg-dark d-flex align-items-center justify-content-center" style={{ minHeight: '600px', padding: '1.5rem' }}>
-                          <img 
-                            src={img} 
-                            alt={`Module Interface ${idx + 1}`} 
-                            className="img-fluid rounded-3 shadow-lg"
-                            style={{ maxHeight: '550px', objectFit: 'contain' }}
-                          />
-                       </div>
-                    </Carousel.Item>
-                  ))}
-                </Carousel>
+                <div className="carousel-wrapper mx-auto" style={{ maxWidth: '1100px' }}>
+                    <Carousel activeIndex={activeIndex} onSelect={handleSelect} className="glass-card shadow-2xl overflow-hidden" indicators={true} interval={5000} fade>
+                    {allImages.map((img, idx) => (
+                        <Carousel.Item key={idx}>
+                        <div className="bg-dark d-flex align-items-center justify-content-center desktop-screenshot-container">
+                            <img 
+                                src={img} 
+                                alt={`Module Interface ${idx + 1}`} 
+                                className="img-fluid rounded-3 shadow-lg screenshot-img"
+                            />
+                        </div>
+                        </Carousel.Item>
+                    ))}
+                    </Carousel>
+                </div>
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5 py-5 border-top border-bottom">
@@ -162,26 +166,26 @@ const FAMSArchitecturalAudit = () => {
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5 py-4">
-                <div className="text-center mb-5">
-                    <h2 className="h4 fw-bold">Interface Library Explorer</h2>
-                    <p className="small text-muted">Click a thumbnail below to view the module in detail above</p>
+                <div className="text-center mb-4">
+                    <h2 className="h4 fw-bold mb-2">Interface Library Explorer</h2>
+                    <p className="small text-muted">Scroll horizontally or click to view module details</p>
                 </div>
-                <div className="archive-grid">
-                    <Row xs={2} md={4} lg={6} className="g-2">
+                <div className="archive-scroll-container">
+                    <div className="d-flex gap-3 pb-3 px-1">
                         {allImages.map((img, idx) => (
-                            <Col key={idx}>
-                                <div 
-                                    className={`glass-card p-1 h-100 hover-lift hover-shadow cursor-pointer transition-all ${activeIndex === idx ? 'border border-2 border-primary' : 'border-0'}`}
-                                    onClick={() => { setActiveIndex(idx); scrollToCarousel(); }}
-                                >
-                                    <div className="position-relative overflow-hidden rounded">
-                                        <img src={img} alt={`Archive UI ${idx}`} className="img-fluid rounded opacity-80 hover-opacity-100 transition-all" style={{ aspectRatio: '16/10', objectFit: 'cover' }} />
-                                    </div>
-                                    <div className="mt-2 text-center text-muted small fw-bold" style={{ fontSize: '0.6rem' }}>UI {idx + 1}</div>
+                            <div 
+                                key={idx}
+                                className={`flex-shrink-0 cursor-pointer transition-all ${activeIndex === idx ? 'opacity-100 scale-105' : 'opacity-60'}`}
+                                onClick={() => { setActiveIndex(idx); scrollToCarousel(); }}
+                                style={{ width: '160px' }}
+                            >
+                                <div className={`glass-card p-1 rounded-3 overflow-hidden ${activeIndex === idx ? 'border-2 border-primary' : 'border-0'}`}>
+                                    <img src={img} alt={`Archive UI ${idx}`} className="img-fluid rounded" style={{ aspectRatio: '16/10', objectFit: 'cover' }} />
+                                    <div className="mt-1 text-center text-muted small fw-bold" style={{ fontSize: '0.6rem' }}>UI {idx + 1}</div>
                                 </div>
-                            </Col>
+                            </div>
                         ))}
-                    </Row>
+                    </div>
                 </div>
             </motion.section>
 
@@ -195,7 +199,7 @@ const FAMSArchitecturalAudit = () => {
                   { phase: "UAT & Handover", progress: 100, desc: "User Acceptance Testing and statutory verification." }
                 ].map((p, i) => (
                   <Col md={3} key={i}>
-                    <div className="glass-card p-3 h-100">
+                    <div className="glass-card p-3 h-100 shadow-sm border-0">
                       <div className="d-flex justify-content-between mb-2">
                         <span className="small fw-bold">{p.phase}</span>
                         <span className="small text-primary fw-bold">{p.progress}%</span>
@@ -218,6 +222,36 @@ const FAMSArchitecturalAudit = () => {
           </motion.div>
         </Container>
       </div>
+
+      <style>{`
+        .desktop-screenshot-container {
+            min-height: 400px;
+            padding: 1.5rem;
+        }
+        .screenshot-img {
+            max-height: 550px;
+            object-fit: contain;
+            width: 100%;
+        }
+        .archive-scroll-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) transparent;
+        }
+        .archive-scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .archive-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+        @media (min-width: 992px) {
+            .desktop-screenshot-container {
+                min-height: 600px;
+            }
+        }
+      `}</style>
     </PasswordShield>
   );
 };
