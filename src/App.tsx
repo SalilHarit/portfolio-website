@@ -13,8 +13,8 @@ const App: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/enterprise-modernization" element={<EnterpriseModernization />} />
-        <Route path="/astro-vista" element={<AstroVista />} />
-        <Route path="/SolarPlantMonitoring" element={<SolarPlantMonitoring />} />
+        <Route path="/astrovista-wellness" element={<AstroVista />} />
+        <Route path="/solar-monitoring" element={<SolarPlantMonitoring />} />
         <Route path="/secerp-case-study" element={<SecERP />} />
       </Routes>
     </div>
