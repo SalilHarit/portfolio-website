@@ -111,7 +111,7 @@ const Home = () => {
           <Navbar.Brand href="/" className="fw-bold tracking-tighter text-dark">SALIL HARIT</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto gap-4 align-items-center">
+            <Nav className="ms-auto gap-3 gap-lg-4 align-items-start align-items-lg-center mt-3 mt-lg-0 mb-3 mb-lg-0">
               <Nav.Link href="#built" className="nav-hover text-dark uppercase small fw-bold">What I've Built</Nav.Link>
               <Nav.Link href="#expertise" className="nav-hover text-dark uppercase small fw-bold">Expertise</Nav.Link>
               <Nav.Link href="mailto:salilharit2001@gmail.com" className="btn btn-outline-primary fw-bold text-primary btn-sm px-4 rounded-pill">HIRE ME</Nav.Link>
@@ -131,7 +131,7 @@ const Home = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Badge bg="primary" className="mb-3 px-3 py-2 rounded-pill opacity-75">BTech · Batch of 2025</Badge>
-                <h1 className="display-1 fw-bold main-title mb-3">
+                <h1 className="display-3 display-md-1 fw-bold main-title mb-3">
                   Flutter <span className="text-primary">Developer</span>
                 </h1>
                 <p className="lead fw-bold mb-4 opacity-75 spacing-2 text-primary">
@@ -140,8 +140,8 @@ const Home = () => {
                 <p className="mx-auto col-md-8 text-muted mb-5 fs-5 lh-base">
                   I build production Flutter (Mobile & Desktop) apps and backend APIs. Recent work includes a 106-screen Flutter Desktop asset management system for a 40-year-old IT firm (Flutter/Riverpod + Spring Boot + PostgreSQL) and a live EdTech platform on the Play Store. Based in Delhi, graduating June 2025, open to full-time roles.
                 </p>
-                <div className="d-flex gap-3 justify-content-center mb-5 mt-4">
-                  <a href="mailto:salilharit2001@gmail.com" className="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2">
+                <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center mb-5 mt-4">
+                  <a href="mailto:salilharit2001@gmail.com" className="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2 justify-content-center">
                     <Mail size={20} /> Get In Touch
                   </a>
                   <div className="d-flex gap-2">
@@ -202,7 +202,7 @@ const Home = () => {
                             </div>
                         )}
 
-                        <div className="mt-auto pt-4 border-top d-flex align-items-center justify-content-between">
+                        <div className="mt-auto pt-4 border-top d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3">
                           <Link to={project.link} className="btn-modern-small d-flex align-items-center gap-2 text-decoration-none">
                              View Case Study <ArrowRight size={16} />
                           </Link>
