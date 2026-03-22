@@ -114,7 +114,7 @@ const Home = () => {
             <Nav className="ms-auto gap-4 align-items-center">
               <Nav.Link href="#built" className="nav-hover uppercase small fw-bold">What I've Built</Nav.Link>
               <Nav.Link href="#expertise" className="nav-hover uppercase small fw-bold">Expertise</Nav.Link>
-              <Nav.Link href="mailto:sharit@sgcenterprisesglobal.com" className="btn btn-outline-primary btn-sm px-4 rounded-pill">HIRE ME</Nav.Link>
+              <Nav.Link href="mailto:salilharit2001@gmail.com" className="btn btn-outline-primary btn-sm px-4 rounded-pill">HIRE ME</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -141,12 +141,12 @@ const Home = () => {
                   I build production Flutter apps and backend APIs. Recent work includes a 106-screen enterprise asset management system for a 40-year-old IT firm (Flutter/Riverpod + Spring Boot + PostgreSQL) and a live EdTech platform on the Play Store. Based in Delhi, graduating June 2025, open to full-time roles.
                 </p>
                 <div className="d-flex gap-3 justify-content-center mb-5 mt-4">
-                  <a href="mailto:sharit@sgcenterprisesglobal.com" className="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2">
+                  <a href="mailto:salilharit2001@gmail.com" className="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg d-flex align-items-center gap-2">
                     <Mail size={20} /> Get In Touch
                   </a>
                   <div className="d-flex gap-2">
                     <a href="https://github.com/SalilHarit" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><Github size={24} /></a>
-                    <a href="https://linkedin.com/in/salil-harit" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><Linkedin size={24} /></a>
+                    <a href="https://linkedin.com/in/salil-harit-85565622" target="_blank" rel="noopener noreferrer" className="social-icon-btn"><Linkedin size={24} /></a>
                   </div>
                 </div>
               </motion.div>
@@ -206,12 +206,14 @@ const Home = () => {
                           <Link to={project.link} className="btn-modern-small d-flex align-items-center gap-2 text-decoration-none">
                              View Case Study <ArrowRight size={16} />
                           </Link>
-                          <Badge bg="success" className="bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill small">
-                            {project.stats}
-                          </Badge>
-                          {project.isPlayStore && (
-                            <img src={PlayStoreLogo} alt="Google Play" className="ms-2" style={{ height: '30px' }} />
-                          )}
+                          <div className="d-flex align-items-center gap-2">
+                             <Badge bg="success" className="bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill small">
+                                {project.stats}
+                             </Badge>
+                             {project.isPlayStore && (
+                                <img src={PlayStoreLogo} alt="Google Play" style={{ height: '30px' }} />
+                             )}
+                          </div>
                         </div>
                       </div>
                     </Card>
@@ -259,8 +261,8 @@ const Home = () => {
         <Container>
             <div className="d-flex justify-content-center gap-4 mb-4">
                 <a href="https://github.com/SalilHarit" target="_blank" rel="noopener noreferrer" className="text-muted hover-primary"><Github size={24} /></a>
-                <a href="https://linkedin.com/in/salil-harit" target="_blank" rel="noopener noreferrer" className="text-muted hover-primary"><Linkedin size={24} /></a>
-                <a href="mailto:sharit@sgcenterprisesglobal.com" className="text-muted hover-primary"><Mail size={24} /></a>
+                <a href="https://linkedin.com/in/salil-harit-85565622" target="_blank" rel="noopener noreferrer" className="text-muted hover-primary"><Linkedin size={24} /></a>
+                <a href="mailto:salilharit2001@gmail.com" className="text-muted hover-primary"><Mail size={24} /></a>
             </div>
           <p className="text-muted small">&copy; {new Date().getFullYear()} Salil Harit. Built with React & Flutter Spirit.</p>
         </Container>
