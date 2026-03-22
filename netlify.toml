@@ -1,0 +1,9 @@
+[build]
+  # Since this is now inside my-portfolio, we don't need a nested base
+  command = "npm run build"
+  publish = "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
