@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -34,7 +33,7 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^6.5.1",
     "https-browserify": "^1.0.0",
     "lucide-react": "^0.451.0",
     "mongodb": "^6.10.0",
@@ -100,16 +99,5 @@
     "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.2.1",
     "typescript": "^4.9.5"
-=======
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/preset-env": "^7.24.8"
-  },
-  "dependencies": {
-    "chart.js": "^4.4.3",
-    "react-d3-tree": "^3.6.2",
-    "react-mindmap": "^2.1.6",
-    "react-syntax-highlighter": "^15.5.0"
->>>>>>> abbe9f5ee3d34e8c16f9ccf6b42e9fee85e06c35
   }
 }

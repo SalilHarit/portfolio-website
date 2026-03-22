@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Row, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Globe, Zap, Users, Shield, Smartphone, Star, BarChart3, Database, Layout, Settings, AlertCircle, Eye, Grid, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Globe, Zap, Users, Shield, Smartphone, Star, BarChart3, Database, Layout, Settings, AlertCircle, Eye, Grid, CheckCircle, Github, ExternalLink } from 'lucide-react';
 import './Home.css';
 import PasswordShield from './PasswordShield';
+import PlayStoreLogo from './google-play-badge-logo-svgrepo-com.svg';
 
 // Import ALL 23 screenshots for AstroVista mobile tour
 import a1 from '../assets/astrovista/WhatsApp Image 2026-03-22 at 12.14.37 (1).jpeg';
@@ -78,10 +79,12 @@ const AstroVistaPortfolio = () => {
               </Link>
               
               <div className="text-center">
-                <span className="project-tag text-uppercase fw-bold opacity-50 spacing-1">B2C Product Strategy</span>
-                <h1 className="display-3 mb-3 fw-bold">AstroVista EdTech & Wellness</h1>
-                <p className="lead mx-auto col-lg-8 text-muted">
-                  Optimizing user engagement and monetization for a premium spiritual wellness ecosystem.
+                <div className="d-flex justify-content-center gap-2 mb-3">
+                    <Badge bg="success" className="bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill small">LIVE ON PLAY STORE</Badge>
+                </div>
+                <h1 className="display-3 mb-3 fw-bold">AstroVista — EdTech Platform</h1>
+                <p className="lead mx-auto col-lg-8 text-muted px-4">
+                  Full-stack mobile application for astrology education featuring video, audio, live sessions and expert consultations.
                 </p>
               </div>
             </motion.div>
@@ -90,21 +93,21 @@ const AstroVistaPortfolio = () => {
               <div className="glass-card mb-5 p-4 p-md-5 border-start border-4 border-primary shadow-sm" style={{ backgroundColor: '#fff' }}>
                 <div className="d-flex align-items-center mb-3">
                   <AlertCircle className="text-primary me-3" size={32} />
-                  <h2 className="h3 fw-bold mb-0 text-dark">The Market Problem it Solves</h2>
+                  <h2 className="h3 fw-bold mb-0 text-dark">Technical Challenge & Scope</h2>
                 </div>
                 <p className="lead text-secondary mb-0 fw-medium" style={{ lineHeight: '1.8', color: '#444' }}>
-                  The spiritual wellness and EdTech market is flooded with <strong>low-quality, fragmented applications</strong> 
-                  at scale. These suffer from poor personalization and massive user churn. Establishing trust is a 
-                  <strong>brand lifecycle problem</strong>, particularly when coupled with inconsistent global 
-                  payment processing and lack of professional-grade automation.
+                  The spiritual wellness and EdTech market is flooded with <strong>low-quality apps</strong>. 
+                  AstroVista re-engineers this as a <strong>performance-first ecosystem</strong>, focused on 
+                  high-retention user paths and a robust global transactional core using Flutter, 
+                  Firebase, and third-party SDKs like Razorpay and Algolia.
                 </p>
               </div>
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5 py-4" id="main-carousel-av">
-                <div className="text-center mb-4">
-                    <h2 className="h4 fw-bold">Mobile Component Highlight</h2>
-                    <p className="small text-muted">Viewing {activeIndex + 1} of {allImages.length} interface stages</p>
+                <div className="text-center mb-5">
+                    <h2 className="h4 fw-bold">Mobile UI Architecture</h2>
+                    <p className="small text-muted">A full tour of the student and creator dashboard experience</p>
                 </div>
                 
                 <Row className="justify-content-center">
@@ -130,28 +133,26 @@ const AstroVistaPortfolio = () => {
             <motion.section variants={itemVariants} className="mb-5 py-5 border-top border-bottom">
               <Row className="g-5 align-items-center">
                 <Col lg={7}>
-                    <h2 className="display-5 fw-bold mb-4">The Solution Brand</h2>
+                    <h2 className="display-5 fw-bold mb-4">Functional Moats</h2>
                     <p className="text-secondary mb-4 fs-5" style={{ lineHeight: '1.8' }}>
-                      Re-engineered AstroVista as a <strong>performance-first mobile ecosystem</strong>, focused on 
-                      personalized high-retention user paths and a robust global transactional core. 
-                      It moves beyond a simple app into a <strong>sustainable consumer brand</strong>.
+                      Re-engineered high-retention user paths and a robust global transactional core.
                     </p>
                     <div className="d-flex flex-row flex-wrap gap-4 mt-2">
                         <div className="d-flex align-items-center">
                             <div className="bg-primary bg-opacity-10 p-2 rounded-circle me-3"><Star size={20} className="text-primary" /></div>
-                            <div><div className="fw-bold small">Engagement Core</div></div>
+                            <div><div className="fw-bold small">Algolia Search</div></div>
                         </div>
                         <div className="d-flex align-items-center">
                             <div className="bg-success bg-opacity-10 p-2 rounded-circle me-3"><Zap size={20} className="text-success" /></div>
-                            <div><div className="fw-bold small">SDK Scalability</div></div>
+                            <div><div className="fw-bold small">Razorpay SDK</div></div>
                         </div>
                     </div>
                 </Col>
                 <Col lg={5}>
                     <div className="glass-card p-4 p-md-5 border-0 shadow-sm">
-                        <h4 className="h5 fw-bold mb-4">Platform Moats</h4>
+                        <h4 className="h5 fw-bold mb-4">Tech Stack Highlights</h4>
                         <div className="d-flex flex-wrap gap-2">
-                            {["Razorpay SDK", "Personalization", "Discovery", "Secure Checkout", "Content Delivery", "Retention CRM"].map((t, i) => (
+                            {["Flutter", "Firebase", "Firestore", "Algolia", "Razorpay", "GCP", "Multi-language (i18n)"].map((t, i) => (
                                 <span key={i} className="tech-pill bg-light text-primary px-3 py-2 rounded-3 small fw-bold">{t}</span>
                             ))}
                         </div>
@@ -163,7 +164,7 @@ const AstroVistaPortfolio = () => {
             <motion.section variants={itemVariants} className="mb-5 py-4">
                 <div className="text-center mb-5">
                     <h2 className="h4 fw-bold">Mobile UI Archives</h2>
-                    <p className="small text-muted">Click a thumbnail below to jump to that app state above</p>
+                    <p className="small text-muted">Interactive record of all mobile interface states</p>
                 </div>
                 <div className="archive-grid">
                     <Row xs={2} md={5} lg={6} className="g-2">
@@ -175,11 +176,6 @@ const AstroVistaPortfolio = () => {
                                 >
                                     <div className="position-relative overflow-hidden rounded text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: '#f8f9fa' }}>
                                         <img src={img} alt={`Mobile UI Archive ${idx}`} className="img-fluid rounded opacity-80 hover-opacity-100 transition-all" style={{ maxHeight: '180px', objectFit: 'contain' }} />
-                                        {activeIndex === idx && (
-                                            <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-5 d-flex align-items-center justify-content-center">
-                                                <div className="bg-primary text-white p-1 rounded-circle"><CheckCircle size={12} /></div>
-                                            </div>
-                                        )}
                                     </div>
                                     <div className="mt-2 text-center text-muted small fw-bold" style={{ fontSize: '0.6rem' }}>APP {idx + 1}</div>
                                 </div>
@@ -189,10 +185,16 @@ const AstroVistaPortfolio = () => {
                 </div>
             </motion.section>
 
-            <motion.div variants={itemVariants} className="text-center mt-5">
-              <Link to="/" className="btn btn-primary px-5 py-3 fw-bold rounded-pill shadow-lg">
-                Return to Master Portfolio
+            <motion.div variants={itemVariants} className="text-center mt-5 d-flex gap-3 justify-content-center">
+              <Link to="/" className="btn btn-outline-primary px-5 py-3 fw-bold rounded-pill">
+                Return to Home
               </Link>
+              <a href="https://play.google.com/store/apps/details?id=com.astrovista" target="_blank" rel="noopener noreferrer" className="btn btn-primary px-4 py-3 fw-bold rounded-pill shadow-lg d-flex align-items-center gap-2">
+                 <img src={PlayStoreLogo} alt="Google Play" style={{ height: '20px' }} /> View on Play Store <ExternalLink size={18} />
+              </a>
+              <a href="https://github.com/SalilHarit/astrovista" target="_blank" rel="noopener noreferrer" className="btn btn-dark px-5 py-3 fw-bold rounded-pill shadow-lg d-flex align-items-center gap-2">
+                <Github size={18} /> View on GitHub
+              </a>
             </motion.div>
           </motion.div>
         </Container>

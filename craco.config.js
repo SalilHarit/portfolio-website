@@ -6,7 +6,7 @@ module.exports = {
       webpackConfig.resolve.fallback = {
         ...webpackConfig.resolve.fallback,
         zlib: require.resolve('browserify-zlib'),
-        process: require.resolve('process/browser'),
+        process: require.resolve('process/browser.js'),
         querystring: require.resolve('querystring-es3'),
         path: require.resolve('path-browserify'),
         crypto: require.resolve('crypto-browserify'),
@@ -16,9 +16,15 @@ module.exports = {
       };
       webpackConfig.plugins = (webpackConfig.plugins || []).concat([
         new webpack.ProvidePlugin({
-          process: 'process/browser',
+          process: 'process/browser.js',
         }),
       ]);
+      webpackConfig.module.rules.push({
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      });
       return webpackConfig;
     },
   },

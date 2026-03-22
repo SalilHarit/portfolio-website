@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Row, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ShieldCheck, Database, Layout, TrendingUp, CheckCircle, Server, BarChart3, Settings, Zap, History, ClipboardCheck, AlertCircle, Eye, Grid } from 'lucide-react';
 import './Home.css';
@@ -77,10 +77,13 @@ const FAMSArchitecturalAudit = () => {
               </Link>
               
               <div className="text-center">
-                <span className="project-tag text-uppercase fw-bold opacity-50 spacing-1">Enterprise Strategic SaaS</span>
-                <h1 className="display-3 mb-3 fw-bold">Fixed Asset Management Platform</h1>
-                <p className="lead mx-auto col-lg-8 text-muted">
-                  Digitizing high-compliance asset lifecycles for complex, multi-site enterprise organizations.
+                <div className="d-flex justify-content-center gap-2 mb-3">
+                    <Badge bg="success" className="bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill small">DELIVERED</Badge>
+                    <Badge bg="primary" className="bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 rounded-pill small">UAT COMPLETE</Badge>
+                </div>
+                <h1 className="display-3 mb-3 fw-bold">FAMS — Fixed Asset Management System</h1>
+                <p className="lead mx-auto col-lg-8 text-muted px-4">
+                  106-screen Flutter application replacing legacy software for a leading Indian industrial services organization.
                 </p>
               </div>
             </motion.div>
@@ -89,21 +92,21 @@ const FAMSArchitecturalAudit = () => {
               <div className="glass-card mb-5 p-4 p-md-5 border-start border-4 border-primary shadow-sm" style={{ backgroundColor: '#fff' }}>
                 <div className="d-flex align-items-center mb-3">
                   <AlertCircle className="text-primary me-3" size={32} />
-                  <h2 className="h3 fw-bold mb-0 text-dark">The Market Problem it Solves</h2>
+                  <h2 className="h3 fw-bold mb-0 text-dark">Technical Context & Market Problem</h2>
                 </div>
                 <p className="lead text-secondary mb-0 fw-medium" style={{ lineHeight: '1.8', color: '#444' }}>
                    Enterprise asset management is typically trapped in <strong>fragmented, manual spreadsheets</strong>. 
                    For high-compliance sectors, this leads to <strong>audit failures, inaccurate depreciation calculations</strong>, 
-                   and millions in lost tax benefits or capital expenditure (CAPEX) errors. Managing thousands of assets 
-                   without a unified ledger is a severe financial and operational risk.
+                   and millions in lost tax benefits. This project involved migrating 40+ years of legacy data into a 
+                   modern Flutter/Spring Boot system with 173 technical requirements.
                 </p>
               </div>
             </motion.section>
 
             <motion.section variants={itemVariants} className="mb-5" id="main-carousel">
                 <div className="text-center mb-4">
-                    <h2 className="h4 fw-bold">Interface Feature Highlight</h2>
-                    <p className="small text-muted">Viewing {activeIndex + 1} of {allImages.length} system states</p>
+                    <h2 className="h4 fw-bold">Production Interface Tour</h2>
+                    <p className="small text-muted">Viewing {activeIndex + 1} of {allImages.length} live system modules</p>
                 </div>
                 
                 <Carousel activeIndex={activeIndex} onSelect={handleSelect} className="glass-card shadow-2xl overflow-hidden" indicators={true} interval={5000} fade>
@@ -125,32 +128,31 @@ const FAMSArchitecturalAudit = () => {
             <motion.section variants={itemVariants} className="mb-5 py-5 border-top border-bottom">
               <Row className="g-5 align-items-center">
                 <Col lg={7}>
-                  <h2 className="display-5 fw-bold mb-4">The Strategic Solution</h2>
+                  <h2 className="display-5 fw-bold mb-4">The Technical Solution</h2>
                   <p className="text-secondary mb-4 fs-5" style={{ lineHeight: '1.8' }}>
                     FAMS provides a centralized source of truth—automating Asset ID generation, 
-                    multi-method depreciation, and financial audit trails. It shifts the finance team 
-                    from manual data entry to <strong>high-level financial governance</strong>.
+                    multi-method depreciation, and financial audit trails.
                   </p>
                   <Row xs={1} md={2} className="g-4">
                     <Col>
                         <div className="d-flex align-items-center mb-1 text-primary fw-bold">
-                            <CheckCircle size={18} className="me-2" /> Compliance core
+                            <CheckCircle size={18} className="me-2" /> Flutter + Riverpod
                         </div>
-                        <p className="small text-muted">Year-end fiscal calculations ready for external auditors.</p>
+                        <p className="small text-muted">High-performance state management across 100+ screens.</p>
                     </Col>
                     <Col>
                         <div className="d-flex align-items-center mb-1 text-success fw-bold">
-                            <TrendingUp size={18} className="me-2" /> ROI Precision
+                            <TrendingUp size={18} className="me-2" /> Spring Boot Core
                         </div>
-                        <p className="small text-muted">Preventing tax overpayments and capital loss via accurate tracking.</p>
+                        <p className="small text-muted">Robust REST APIs with JWT security and PostgreSQL persistence.</p>
                     </Col>
                   </Row>
                 </Col>
                 <Col lg={5}>
                     <div className="glass-card p-4 p-md-5 border-0 shadow-sm">
-                        <h4 className="h5 fw-bold mb-4">Functional Moats</h4>
+                        <h4 className="h5 fw-bold mb-4">Functional Delivery</h4>
                         <div className="d-flex flex-wrap gap-2">
-                            {["RBAC Governance", "WDV Automation", "Asset Lifecycles", "Auditor Logs", "FAR Reporting", "Barcode Ready"].map((t, i) => (
+                            {["Riverpod", "Spring Boot", "JWT Auth", "PostgreSQL", "Jira UAT", "QR Tracking", "RESTful APIs"].map((t, i) => (
                                 <span key={i} className="tech-pill bg-light text-primary px-3 py-2 rounded-3 small fw-bold">{t}</span>
                             ))}
                         </div>
@@ -174,11 +176,6 @@ const FAMSArchitecturalAudit = () => {
                                 >
                                     <div className="position-relative overflow-hidden rounded">
                                         <img src={img} alt={`Archive UI ${idx}`} className="img-fluid rounded opacity-80 hover-opacity-100 transition-all" style={{ aspectRatio: '16/10', objectFit: 'cover' }} />
-                                        {activeIndex === idx && (
-                                            <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary bg-opacity-10 d-flex align-items-center justify-content-center">
-                                                <div className="bg-primary text-white p-1 rounded-circle"><CheckCircle size={12} /></div>
-                                            </div>
-                                        )}
                                     </div>
                                     <div className="mt-2 text-center text-muted small fw-bold" style={{ fontSize: '0.6rem' }}>UI {idx + 1}</div>
                                 </div>
@@ -186,6 +183,31 @@ const FAMSArchitecturalAudit = () => {
                         ))}
                     </Row>
                 </div>
+            </motion.section>
+
+            <motion.section variants={itemVariants} className="mb-5 py-4">
+              <h2 className="h4 fw-bold mb-4">Project Delivery Roadmap</h2>
+              <Row className="g-4">
+                {[
+                  { phase: "Requirements & Audit", progress: 100, desc: "Legacy data migration strategy and rule mapping." },
+                  { phase: "Architecture & API", progress: 100, desc: "Spring Boot backend with PostgreSQL schema design." },
+                  { phase: "Mobile Development", progress: 100, desc: "106-screen Flutter app with Riverpod state management." },
+                  { phase: "UAT & Handover", progress: 100, desc: "User Acceptance Testing and statutory verification." }
+                ].map((p, i) => (
+                  <Col md={3} key={i}>
+                    <div className="glass-card p-3 h-100">
+                      <div className="d-flex justify-content-between mb-2">
+                        <span className="small fw-bold">{p.phase}</span>
+                        <span className="small text-primary fw-bold">{p.progress}%</span>
+                      </div>
+                      <div className="progress mb-2" style={{ height: '6px' }}>
+                        <div className="progress-bar bg-primary" style={{ width: `${p.progress}%` }}></div>
+                      </div>
+                      <p className="x-small text-muted mb-0">{p.desc}</p>
+                    </div>
+                  </Col>
+                ))}
+              </Row>
             </motion.section>
 
             <motion.div variants={itemVariants} className="text-center mt-5">
